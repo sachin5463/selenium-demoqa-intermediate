@@ -198,7 +198,25 @@ public class AssertionsTests extends BaseTest {
 //                "❌ URL mismatch!");
 //    }
 
-    @Test(retryAnalyzer = com.demoqa.utils.RetryAnalyzer.class)
+//    @Test(retryAnalyzer = com.demoqa.utils.RetryAnalyzer.class)
+//    public void verifyTitleAndURL() {
+//        driver.get("https://www.lambdatest.com/selenium-playground/");
+//
+//        new WebDriverWait(driver, Duration.ofSeconds(15))
+//                .until(ExpectedConditions.jsReturnsValue("return document.readyState==\"complete\";"));
+//
+//        String actualTitle = driver.getTitle().trim();
+//        System.out.println("🔹 Actual title: " + actualTitle);
+//
+//        // ❌ Force failing to trigger RetryAnalyzer (just for testing)
+//        Assert.assertTrue(actualTitle.contains("NonExistingKeyword"),
+//                "❌ Forced Failure: Expected keyword not found in title!");
+//
+//        String currentUrl = driver.getCurrentUrl();
+//        Assert.assertTrue(currentUrl.contains("selenium-playground"), "❌ URL mismatch!");
+//    }
+
+    @Test
     public void verifyTitleAndURL() {
         driver.get("https://www.lambdatest.com/selenium-playground/");
 
@@ -208,13 +226,14 @@ public class AssertionsTests extends BaseTest {
         String actualTitle = driver.getTitle().trim();
         System.out.println("🔹 Actual title: " + actualTitle);
 
-        // ❌ Force failing to trigger RetryAnalyzer (just for testing)
-        Assert.assertTrue(actualTitle.contains("NonExistingKeyword"),
-                "❌ Forced Failure: Expected keyword not found in title!");
+        // ✅ Corrected assertion for Jenkins build success
+        Assert.assertTrue(actualTitle.contains("Selenium Grid Online"),
+                "❌ Title mismatch: Expected 'Selenium Grid Online' keyword not found in title!");
 
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("selenium-playground"), "❌ URL mismatch!");
     }
+
 
     @Test
     public void verifyElementText() {
