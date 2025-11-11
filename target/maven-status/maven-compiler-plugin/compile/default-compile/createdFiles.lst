@@ -1,0 +1,11 @@
+com\demoqa\utils\ExcelUtil.class
+com\demoqa\utils\ExcelUtils.class
+com\demoqa\base\BasePage.class
+com\demoqa\base\DriverFactory.class
+com\demoqa\utils\JsonUtils.class
+com\demoqa\utils\WaitUtil.class
+com\demoqa\pages\WaitsPage.class
+com\demoqa\pages\AlertsPage.class
+com\demoqa\utils\ConfigLoader.class
+com\demoqa\pages\FramesPage.class
+com\demoqa\pages\BrowserWindowsPage.class
