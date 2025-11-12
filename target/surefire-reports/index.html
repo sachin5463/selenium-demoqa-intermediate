@@ -5,9 +5,8 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,9 +20,9 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -38,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Command_line_suite" class="navigator-link">
-              <span class="suite-name border-passed">Command line suite</span>
+            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
+              <span class="suite-name border-passed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Command_line_suite" class="navigator-link ">
+                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
                     <span>[unset file name]</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Command_line_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Command_line_suite" class="navigator-link ">
-                    <span>2 groups</span>
+                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                    <span>5 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Command_line_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Command_line_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Command_line_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Command_line_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,51 +91,156 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">28 methods,   28 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods passed suite-Command_line_suite"> (hide)</a> <!-- hide-methods passed suite-Command_line_suite -->
-                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods passed suite-Command_line_suite"> (show)</a> <!-- show-methods passed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Command_line_suite">
+                    <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="dependentTest">dependentTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.JsonDataProviderTests" class="method navigator-link" hash-for-method="debugJson">debugJson</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="regressionTest">regressionTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="dependentTest">dependentTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="smokeTest">smokeTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="regressionTest">regressionTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyBrowserParameter(chrome)">verifyBrowserParameter(chrome)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="smokeTest">smokeTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyLoginData(guest, guest@123)">verifyLoginData(guest, guest@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyBrowserParameter(chrome)">verifyBrowserParameter(chrome)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyLoginData(admin, admin123)">verifyLoginData(admin, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.WaitsTests" class="method navigator-link" hash-for-method="verifyButtonBecomesEnabled">verifyButtonBecomesEnabled</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyLoginData(sachin, test123)">verifyLoginData(sachin, test123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.WaitsTests" class="method navigator-link" hash-for-method="verifyButtonBecomesVisible">verifyButtonBecomesVisible</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Command_line_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.WaitsTests" class="method navigator-link" hash-for-method="verifyColorChangeWithFluentWait">verifyColorChangeWithFluentWait</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.AlertsTests" class="method navigator-link" hash-for-method="verifyConfirmAlertAccept">verifyConfirmAlertAccept</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.AssertionsTests" class="method navigator-link" hash-for-method="verifyElementText">verifyElementText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.DataPoolTests" class="method navigator-link" hash-for-method="verifyExcelDataRead">verifyExcelDataRead</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.ExcelDataProviderTests" class="method navigator-link" hash-for-method="verifyExcelLogin(admin, admin123)">verifyExcelLogin(admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.WaitsTests" class="method navigator-link" hash-for-method="verifyJSExecutorClick">verifyJSExecutorClick</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.JsonDataProviderTests" class="method navigator-link" hash-for-method="verifyJsonLogin(user, pass123)">verifyJsonLogin(user, pass123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.JsonDataProviderTests" class="method navigator-link" hash-for-method="verifyJsonLogin(tester, test@123)">verifyJsonLogin(tester, test@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.JsonDataProviderTests" class="method navigator-link" hash-for-method="verifyJsonLogin(admin, admin123)">verifyJsonLogin(admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.DataProviderTests" class="method navigator-link" hash-for-method="verifyLogin(admin, admin123)">verifyLogin(admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyLoginData(admin, admin123)">verifyLoginData(admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyLoginData(guest, guest@123)">verifyLoginData(guest, guest@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.TestNGAdvancedTests" class="method navigator-link" hash-for-method="verifyLoginData(sachin, test123)">verifyLoginData(sachin, test123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.AssertionsTests" class="method navigator-link" hash-for-method="verifyMultipleConditions">verifyMultipleConditions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.BrowserWindowsTests" class="method navigator-link" hash-for-method="verifyNewTabHeading">verifyNewTabHeading</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.AlertsTests" class="method navigator-link" hash-for-method="verifyPromptAlert">verifyPromptAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.DataPoolTests" class="method navigator-link" hash-for-method="verifyPropertyData">verifyPropertyData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.AlertsTests" class="method navigator-link" hash-for-method="verifySimpleAlert">verifySimpleAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.FramesTests" class="method navigator-link" hash-for-method="verifyTextInsideFrames">verifyTextInsideFrames</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.AssertionsTests" class="method navigator-link" hash-for-method="verifyTitleAndURL">verifyTitleAndURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.demoqa.tests.AssertionsTests" class="method navigator-link" hash-for-method="verifyTitleAndURL_Pass">verifyTitleAndURL_Pass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -147,8 +251,61 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
-          <div class="suite-Command_line_suite-class-passed">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.DataPoolTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyExcelDataRead">
+                  </a> <!-- verifyExcelDataRead -->
+                  <span class="method-name">verifyExcelDataRead</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPropertyData">
+                  </a> <!-- verifyPropertyData -->
+                  <span class="method-name">verifyPropertyData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.FramesTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTextInsideFrames">
+                  </a> <!-- verifyTextInsideFrames -->
+                  <span class="method-name">verifyTextInsideFrames</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.DataProviderTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin(admin, admin123)">
+                  </a> <!-- verifyLogin(admin, admin123) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(admin, admin123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.demoqa.tests.TestNGAdvancedTests</span>
@@ -185,18 +342,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoginData(guest, guest@123)">
-                  </a> <!-- verifyLoginData(guest, guest@123) -->
+                  <a name="verifyLoginData(admin, admin123)">
+                  </a> <!-- verifyLoginData(admin, admin123) -->
                   <span class="method-name">verifyLoginData</span>
-                  <span class="parameters">(guest,guest@123)</span>
+                  <span class="parameters">(admin, admin123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoginData(admin, admin123)">
-                  </a> <!-- verifyLoginData(admin, admin123) -->
+                  <a name="verifyLoginData(guest, guest@123)">
+                  </a> <!-- verifyLoginData(guest, guest@123) -->
                   <span class="method-name">verifyLoginData</span>
-                  <span class="parameters">(admin,admin123)</span>
+                  <span class="parameters">(guest, guest@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -204,53 +361,261 @@
                   <a name="verifyLoginData(sachin, test123)">
                   </a> <!-- verifyLoginData(sachin, test123) -->
                   <span class="method-name">verifyLoginData</span>
-                  <span class="parameters">(sachin,test123)</span>
+                  <span class="parameters">(sachin, test123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
-        </div> <!-- panel Command_line_suite -->
-        <div panel-name="test-xml-Command_line_suite" class="panel">
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.JsonDataProviderTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="debugJson">
+                  </a> <!-- debugJson -->
+                  <span class="method-name">debugJson</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyJsonLogin(user, pass123)">
+                  </a> <!-- verifyJsonLogin(user, pass123) -->
+                  <span class="method-name">verifyJsonLogin</span>
+                  <span class="parameters">(user, pass123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyJsonLogin(tester, test@123)">
+                  </a> <!-- verifyJsonLogin(tester, test@123) -->
+                  <span class="method-name">verifyJsonLogin</span>
+                  <span class="parameters">(tester, test@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyJsonLogin(admin, admin123)">
+                  </a> <!-- verifyJsonLogin(admin, admin123) -->
+                  <span class="method-name">verifyJsonLogin</span>
+                  <span class="parameters">(admin, admin123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.AlertsTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyConfirmAlertAccept">
+                  </a> <!-- verifyConfirmAlertAccept -->
+                  <span class="method-name">verifyConfirmAlertAccept</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPromptAlert">
+                  </a> <!-- verifyPromptAlert -->
+                  <span class="method-name">verifyPromptAlert</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySimpleAlert">
+                  </a> <!-- verifySimpleAlert -->
+                  <span class="method-name">verifySimpleAlert</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.WaitsTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyButtonBecomesEnabled">
+                  </a> <!-- verifyButtonBecomesEnabled -->
+                  <span class="method-name">verifyButtonBecomesEnabled</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyButtonBecomesVisible">
+                  </a> <!-- verifyButtonBecomesVisible -->
+                  <span class="method-name">verifyButtonBecomesVisible</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyColorChangeWithFluentWait">
+                  </a> <!-- verifyColorChangeWithFluentWait -->
+                  <span class="method-name">verifyColorChangeWithFluentWait</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyJSExecutorClick">
+                  </a> <!-- verifyJSExecutorClick -->
+                  <span class="method-name">verifyJSExecutorClick</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.AssertionsTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyElementText">
+                  </a> <!-- verifyElementText -->
+                  <span class="method-name">verifyElementText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMultipleConditions">
+                  </a> <!-- verifyMultipleConditions -->
+                  <span class="method-name">verifyMultipleConditions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTitleAndURL">
+                  </a> <!-- verifyTitleAndURL -->
+                  <span class="method-name">verifyTitleAndURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTitleAndURL_Pass">
+                  </a> <!-- verifyTitleAndURL_Pass -->
+                  <span class="method-name">verifyTitleAndURL_Pass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.BrowserWindowsTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyNewTabHeading">
+                  </a> <!-- verifyNewTabHeading -->
+                  <span class="method-name">verifyNewTabHeading</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demoqa.tests.ExcelDataProviderTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyExcelLogin(admin, admin123)">
+                  </a> <!-- verifyExcelLogin(admin, admin123) -->
+                  <span class="method-name">verifyExcelLogin</span>
+                  <span class="parameters">(admin, admin123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Command line suite&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Command line test&quot; verbose=&quot;0&quot;&gt;
+&lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.demoqa.listeners.TestListener&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.AlertsTests&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.AssertionsTests&quot;/&gt;
       &lt;class name=&quot;com.demoqa.tests.BaseTest&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.BrowserWindowsTests&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.DataPoolTests&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.DataProviderTests&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.ExcelDataProviderTests&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.FramesTests&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.JsonDataProviderTests&quot;/&gt;
       &lt;class name=&quot;com.demoqa.tests.TestNGAdvancedTests&quot;/&gt;
+      &lt;class name=&quot;com.demoqa.tests.WaitsTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Command line test --&gt;
-&lt;/suite&gt; &lt;!-- Command line suite --&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Command_line_suite" class="panel">
+        <div panel-name="testlist-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Command line suite</span>
+            <span class="header-content">Tests for Surefire suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (3 classes)</span>
+                <span class="test-name">Surefire test (12 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Command_line_suite" class="panel">
+        <div panel-name="group-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Command line suite</span>
+            <span class="header-content">Groups for Surefire suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">alerts</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyConfirmAlertAccept</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyPromptAlert</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifySimpleAlert</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">frames</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyTextInsideFrames</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">regressionTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyTextInsideFrames</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -261,115 +626,493 @@
                 <span class="method-in-group-name">smokeTest</span>
                 <br/>
               </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyNewTabHeading</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">windows</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyNewTabHeading</span>
+                <br/>
+              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Command_line_suite" class="panel">
+        <div panel-name="times-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Command line suite</span>
+            <span class="header-content">Times for Surefire suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Command_line_suite');
-function tableData_Command_line_suite() {
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(28);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'smokeTest')
-data.setCell(0, 2, 'com.demoqa.tests.TestNGAdvancedTests')
-data.setCell(0, 3, 23);
+data.setCell(0, 1, 'verifyConfirmAlertAccept')
+data.setCell(0, 2, 'com.demoqa.tests.AlertsTests')
+data.setCell(0, 3, 34814);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyBrowserParameter')
-data.setCell(1, 2, 'com.demoqa.tests.TestNGAdvancedTests')
-data.setCell(1, 3, 7);
+data.setCell(1, 1, 'verifyJSExecutorClick')
+data.setCell(1, 2, 'com.demoqa.tests.WaitsTests')
+data.setCell(1, 3, 29045);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyLoginData')
-data.setCell(2, 2, 'com.demoqa.tests.TestNGAdvancedTests')
-data.setCell(2, 3, 5);
+data.setCell(2, 1, 'verifyTextInsideFrames')
+data.setCell(2, 2, 'com.demoqa.tests.FramesTests')
+data.setCell(2, 3, 21193);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyLoginData')
-data.setCell(3, 2, 'com.demoqa.tests.TestNGAdvancedTests')
-data.setCell(3, 3, 4);
+data.setCell(3, 1, 'verifyButtonBecomesEnabled')
+data.setCell(3, 2, 'com.demoqa.tests.WaitsTests')
+data.setCell(3, 3, 19808);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'regressionTest')
-data.setCell(4, 2, 'com.demoqa.tests.TestNGAdvancedTests')
-data.setCell(4, 3, 2);
+data.setCell(4, 1, 'verifyColorChangeWithFluentWait')
+data.setCell(4, 2, 'com.demoqa.tests.WaitsTests')
+data.setCell(4, 3, 17966);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'dependentTest')
-data.setCell(5, 2, 'com.demoqa.tests.TestNGAdvancedTests')
-data.setCell(5, 3, 2);
+data.setCell(5, 1, 'verifyNewTabHeading')
+data.setCell(5, 2, 'com.demoqa.tests.BrowserWindowsTests')
+data.setCell(5, 3, 14207);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyLoginData')
-data.setCell(6, 2, 'com.demoqa.tests.TestNGAdvancedTests')
-data.setCell(6, 3, 1);
-window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
+data.setCell(6, 1, 'verifySimpleAlert')
+data.setCell(6, 2, 'com.demoqa.tests.AlertsTests')
+data.setCell(6, 3, 13277);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyButtonBecomesVisible')
+data.setCell(7, 2, 'com.demoqa.tests.WaitsTests')
+data.setCell(7, 3, 12756);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyMultipleConditions')
+data.setCell(8, 2, 'com.demoqa.tests.AssertionsTests')
+data.setCell(8, 3, 10253);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyPromptAlert')
+data.setCell(9, 2, 'com.demoqa.tests.AlertsTests')
+data.setCell(9, 3, 8798);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyElementText')
+data.setCell(10, 2, 'com.demoqa.tests.AssertionsTests')
+data.setCell(10, 3, 8405);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyTitleAndURL_Pass')
+data.setCell(11, 2, 'com.demoqa.tests.AssertionsTests')
+data.setCell(11, 3, 7950);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyTitleAndURL')
+data.setCell(12, 2, 'com.demoqa.tests.AssertionsTests')
+data.setCell(12, 3, 4053);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyExcelDataRead')
+data.setCell(13, 2, 'com.demoqa.tests.DataPoolTests')
+data.setCell(13, 3, 859);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'debugJson')
+data.setCell(14, 2, 'com.demoqa.tests.JsonDataProviderTests')
+data.setCell(14, 3, 61);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyLogin')
+data.setCell(15, 2, 'com.demoqa.tests.DataProviderTests')
+data.setCell(15, 3, 9);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyJsonLogin')
+data.setCell(16, 2, 'com.demoqa.tests.JsonDataProviderTests')
+data.setCell(16, 3, 7);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyExcelLogin')
+data.setCell(17, 2, 'com.demoqa.tests.ExcelDataProviderTests')
+data.setCell(17, 3, 6);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyPropertyData')
+data.setCell(18, 2, 'com.demoqa.tests.DataPoolTests')
+data.setCell(18, 3, 6);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyLoginData')
+data.setCell(19, 2, 'com.demoqa.tests.TestNGAdvancedTests')
+data.setCell(19, 3, 5);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyJsonLogin')
+data.setCell(20, 2, 'com.demoqa.tests.JsonDataProviderTests')
+data.setCell(20, 3, 4);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'verifyJsonLogin')
+data.setCell(21, 2, 'com.demoqa.tests.JsonDataProviderTests')
+data.setCell(21, 3, 4);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'verifyBrowserParameter')
+data.setCell(22, 2, 'com.demoqa.tests.TestNGAdvancedTests')
+data.setCell(22, 3, 4);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'dependentTest')
+data.setCell(23, 2, 'com.demoqa.tests.TestNGAdvancedTests')
+data.setCell(23, 3, 3);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'verifyLoginData')
+data.setCell(24, 2, 'com.demoqa.tests.TestNGAdvancedTests')
+data.setCell(24, 3, 3);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'smokeTest')
+data.setCell(25, 2, 'com.demoqa.tests.TestNGAdvancedTests')
+data.setCell(25, 3, 3);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'verifyLoginData')
+data.setCell(26, 2, 'com.demoqa.tests.TestNGAdvancedTests')
+data.setCell(26, 3, 2);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'regressionTest')
+data.setCell(27, 2, 'com.demoqa.tests.TestNGAdvancedTests')
+data.setCell(27, 3, 2);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 44 ms</span>
-              <div id="times-div-Command_line_suite">
-              </div> <!-- times-div-Command_line_suite -->
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Command_line_suite" class="panel">
+        <div panel-name="reporter-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Command line suite</span>
+            <span class="header-content">Reporter output for Surefire suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Command_line_suite" class="panel">
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Command_line_suite" class="panel">
+        <div panel-name="chronological-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.AlertsTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyConfirmAlertAccept</span>
+                <span class="method-start">5368 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">40751 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">42251 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPromptAlert</span>
+                <span class="method-start">44753 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">53969 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">54533 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySimpleAlert</span>
+                <span class="method-start">56613 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">70264 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.AssertionsTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">70891 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyElementText</span>
+                <span class="method-start">72983 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">81623 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">82062 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyMultipleConditions</span>
+                <span class="method-start">84016 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">94431 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">95063 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTitleAndURL</span>
+                <span class="method-start">97220 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">101467 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">102061 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTitleAndURL_Pass</span>
+                <span class="method-start">104002 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">112163 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.BrowserWindowsTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">112674 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyNewTabHeading</span>
+                <span class="method-start">114505 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">128982 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.DataPoolTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">130192 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyExcelDataRead</span>
+                <span class="method-start">131742 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">132724 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">133176 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPropertyData</span>
+                <span class="method-start">135222 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">135382 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.DataProviderTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">135779 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin(admin, admin123)</span>
+                <span class="method-start">137582 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">137731 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.ExcelDataProviderTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">138317 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyExcelLogin(admin, admin123)</span>
+                <span class="method-start">139970 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">140117 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.FramesTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">140500 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTextInsideFrames</span>
+                <span class="method-start">142294 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">163817 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.JsonDataProviderTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">check</span>
+                <span class="method-start">164522 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">164524 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">debugJson</span>
+                <span class="method-start">166345 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">166558 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">167027 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyJsonLogin(admin, admin123)</span>
+                <span class="method-start">168968 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">169128 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">169559 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyJsonLogin(tester, test@123)</span>
+                <span class="method-start">171315 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">171454 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">171847 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyJsonLogin(user, pass123)</span>
+                <span class="method-start">173677 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">173834 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">com.demoqa.tests.TestNGAdvancedTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">smokeTest</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">regressionTest</span>
-                <span class="method-start">48 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyBrowserParameter(chrome)</span>
-                <span class="method-start">73 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyLoginData(admin, admin123)</span>
-                <span class="method-start">90 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyLoginData(sachin, test123)</span>
-                <span class="method-start">98 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyLoginData(guest, guest@123)</span>
-                <span class="method-start">104 ms</span>
+                <span class="method-start">174359 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">dependentTest</span>
-                <span class="method-start">113 ms</span>
+                <span class="method-start">174366 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">regressionTest</span>
+                <span class="method-start">174375 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyBrowserParameter(chrome)</span>
+                <span class="method-start">174382 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginData(admin, admin123)</span>
+                <span class="method-start">174393 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginData(sachin, test123)</span>
+                <span class="method-start">174398 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginData(guest, guest@123)</span>
+                <span class="method-start">174410 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demoqa.tests.WaitsTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">174420 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyButtonBecomesEnabled</span>
+                <span class="method-start">176165 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">196262 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">196765 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyButtonBecomesVisible</span>
+                <span class="method-start">198606 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">211646 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">212514 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyColorChangeWithFluentWait</span>
+                <span class="method-start">214152 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">232410 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(null)</span>
+                <span class="method-start">233077 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyJSExecutorClick</span>
+                <span class="method-start">234826 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">264124 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
-<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

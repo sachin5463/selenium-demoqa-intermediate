@@ -1,3 +1,95 @@
+//package com.demoqa.tests;
+//
+//import com.demoqa.utils.JsonUtils;
+//import org.testng.Assert;
+//import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.DataProvider;
+//import org.testng.annotations.Test;
+//
+//public class JsonDataProviderTests extends BaseTest {
+//
+//    @BeforeClass
+//    public void check() {
+//        System.out.println("✅ JsonDataProviderTests initialized successfully!");
+//    }
+//
+////    @DataProvider(name = "jsonLoginData")
+////    public Object[][] getJsonData() {
+////        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.json";
+////        return JsonUtils.getJsonData(path);
+////    }
+//
+//    @DataProvider(name = "loginData")
+//    public Object[][] loginData() {
+//        return new Object[][]{
+//                {"admin", "admin123"}
+//        };
+//    }
+//
+//    //@Test(dataProvider = "jsonLoginData")
+//    @Test(dataProvider = "loginData")
+//    public void verifyJsonLogin(String username, String password) {
+//        System.out.println("🔹 JSON login attempt: " + username + " / " + password);
+//
+//        boolean isValid = username.equals("admin") && password.equals("admin123");
+//        //Assert.assertTrue(isValid, "❌ Invalid JSON credentials: " + username);
+//        Assert.assertTrue(true, "✅ Valid credentials passed!");
+//    }
+//
+//    @Test
+//    public void debugJson() {
+//        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.json";
+//        Object[][] data = com.demoqa.utils.JsonUtils.getJsonData(path);
+//        System.out.println("Loaded data rows: " + data.length);
+//    }
+//}
+
+
+//package com.demoqa.tests;
+//
+//import com.demoqa.utils.JsonUtils;
+//import org.testng.Assert;
+//import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.DataProvider;
+//import org.testng.annotations.Test;
+//
+//public class JsonDataProviderTests extends BaseTest {
+//
+//    @BeforeClass
+//    public void check() {
+//        System.out.println("✅ JsonDataProviderTests initialized successfully!");
+//    }
+//
+//    // ✅ Use JSON file as real data source
+//    @DataProvider(name = "jsonLoginData")
+//    public Object[][] getJsonData() {
+//        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.json";
+//        return JsonUtils.getJsonData(path);
+//    }
+//
+//    // ✅ Run test for each JSON row
+//    @Test(dataProvider = "jsonLoginData")
+//    public void verifyJsonLogin(String username, String password) {
+//        System.out.println("🔹 JSON login attempt: " + username + " / " + password);
+//
+//        boolean isValid = username.equals("admin") && password.equals("admin123");
+//
+//        if (isValid) {
+//            Assert.assertTrue(true, "✅ Valid JSON credentials passed!");
+//        } else {
+//            Assert.fail("❌ Invalid JSON credentials: " + username);
+//        }
+//    }
+//
+//    // ✅ Optional debug helper
+//    @Test
+//    public void debugJson() {
+//        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.json";
+//        Object[][] data = JsonUtils.getJsonData(path);
+//        System.out.println("Loaded data rows: " + data.length);
+//    }
+//}
+
 package com.demoqa.tests;
 
 import com.demoqa.utils.JsonUtils;
@@ -13,33 +105,30 @@ public class JsonDataProviderTests extends BaseTest {
         System.out.println("✅ JsonDataProviderTests initialized successfully!");
     }
 
-//    @DataProvider(name = "jsonLoginData")
-//    public Object[][] getJsonData() {
-//        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.json";
-//        return JsonUtils.getJsonData(path);
-//    }
-
-    @DataProvider(name = "loginData")
-    public Object[][] loginData() {
-        return new Object[][]{
-                {"admin", "admin123"}
-        };
+    @DataProvider(name = "jsonLoginData")
+    public Object[][] getJsonData() {
+        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.json";
+        return JsonUtils.getJsonData(path);
     }
 
-    //@Test(dataProvider = "jsonLoginData")
-    @Test(dataProvider = "loginData")
+    @Test(dataProvider = "jsonLoginData")
     public void verifyJsonLogin(String username, String password) {
         System.out.println("🔹 JSON login attempt: " + username + " / " + password);
 
-        boolean isValid = username.equals("admin") && password.equals("admin123");
-        //Assert.assertTrue(isValid, "❌ Invalid JSON credentials: " + username);
-        Assert.assertTrue(true, "✅ Valid credentials passed!");
+        // ✅ All valid credential pairs
+        boolean isValid =
+                (username.equals("admin") && password.equals("admin123")) ||
+                        (username.equals("tester") && password.equals("test@123")) ||
+                        (username.equals("user") && password.equals("pass123"));
+
+        Assert.assertTrue(isValid, "❌ Invalid JSON credentials: " + username);
+        System.out.println("✅ Valid JSON credentials: " + username);
     }
 
     @Test
     public void debugJson() {
         String path = System.getProperty("user.dir") + "/src/test/resources/testdata/LoginData.json";
-        Object[][] data = com.demoqa.utils.JsonUtils.getJsonData(path);
+        Object[][] data = JsonUtils.getJsonData(path);
         System.out.println("Loaded data rows: " + data.length);
     }
 }

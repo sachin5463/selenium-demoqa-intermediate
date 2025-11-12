@@ -1,992 +1,4187 @@
 
 
+
+
+
+
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>DemoQA Automation Report</title>
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
-<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
-<style type="text/css"></style></head><body class="spa -report dark">
-  <div class="app">
-    <div class="layout">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DemoQA Automation Report</title>
+        <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+	    <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@6fbbd1c32fbc2463d026da5c6ce2e9eef0d29512/spark/css/spark-style.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head>    <script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="spa -report dark">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
 <div class="header navbar">
-<div class="vheader">
-<div class="nav-logo">
-<a href="#">
-<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
-</a>
-</div>
-<ul class="nav-left">
-<li class="search-box">
-<a class="search-toggle" href="#">
-<i class="search-icon fa fa-search"></i>
-<i class="search-icon-close fa fa-close"></i>
-</a>
-</li>
-<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
-</ul>
-<ul class="nav-right">
-<li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Intermediate Framework Execution</span></a>
-</li>
-<li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 12, 2025 01:12:38 PM</span></a>
-</li>
-</ul>
-</div>
+    <div class="vheader">
+        <div class="nav-logo">
+          <a href="#">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Intermediate Framework Execution</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">Nov 13, 2025 01:22:31 AM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div><div class="side-nav">
-<div class="side-nav-inner">
-<ul class="side-nav-menu">
-<li class="nav-item dropdown" onclick="toggleView('test-view')">
-<a id="nav-test" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
-<a id="nav-dashboard" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bar-chart"></i></span>
-</a>
-</li>
-</ul>
-</div>
-</div>      <div class="vcontainer">
-        <div class="main-content">
-<div class="test-wrapper row view test-view">
-  <div class="test-list">
-    <div class="test-list-tools">
-<ul class="tools pull-left">
-<li><a href="#"><span class="font-size-14">Tests</span></a></li>
-</ul>
-<ul class="tools text-right">
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
-<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<div class="dropdown-divider"></div>
-<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
-</ul>
-</li>
-</ul>
-</div>    <div class="test-list-wrapper scrollable">
-      <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyNewTabHeading</p>
-            <p class="text-sm">
-              <span>1:12:45 PM</span> / <span>00:00:05:589</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyNewTabHeading</h5>
-<span class='badge badge-success'>11.12.2025 1:12:45 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:12:50 PM</span>
-<span class='badge badge-default'>00:00:05:589</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:12:50 PM</td>
-        <td>
-          ✅ Test passed: verifyNewTabHeading
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyTextInsideFrames</p>
-            <p class="text-sm">
-              <span>1:12:53 PM</span> / <span>00:00:04:221</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
-<span class='badge badge-success'>11.12.2025 1:12:53 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:12:57 PM</span>
-<span class='badge badge-default'>00:00:04:221</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:12:56 PM</td>
-        <td>
-          ✅ Test passed: verifyTextInsideFrames
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyConfirmAlertAccept</p>
-            <p class="text-sm">
-              <span>1:12:59 PM</span> / <span>00:00:03:862</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
-<span class='badge badge-success'>11.12.2025 1:12:59 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:13:03 PM</span>
-<span class='badge badge-default'>00:00:03:862</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:13:03 PM</td>
-        <td>
-          ✅ Test passed: verifyConfirmAlertAccept
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyPromptAlert</p>
-            <p class="text-sm">
-              <span>1:13:07 PM</span> / <span>00:00:14:690</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyPromptAlert</h5>
-<span class='badge badge-success'>11.12.2025 1:13:07 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:13:22 PM</span>
-<span class='badge badge-default'>00:00:14:690</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:13:21 PM</td>
-        <td>
-          ✅ Test passed: verifyPromptAlert
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="5"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifySimpleAlert</p>
-            <p class="text-sm">
-              <span>1:13:24 PM</span> / <span>00:00:04:961</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifySimpleAlert</h5>
-<span class='badge badge-success'>11.12.2025 1:13:24 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:13:29 PM</span>
-<span class='badge badge-default'>00:00:04:961</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:13:28 PM</td>
-        <td>
-          ✅ Test passed: verifySimpleAlert
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyElementText</p>
-            <p class="text-sm">
-              <span>1:13:31 PM</span> / <span>00:00:03:353</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyElementText</h5>
-<span class='badge badge-success'>11.12.2025 1:13:31 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:13:35 PM</span>
-<span class='badge badge-default'>00:00:03:353</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:13:34 PM</td>
-        <td>
-          ✅ Test passed: verifyElementText
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyMultipleConditions</p>
-            <p class="text-sm">
-              <span>1:13:37 PM</span> / <span>00:00:31:115</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyMultipleConditions</h5>
-<span class='badge badge-success'>11.12.2025 1:13:37 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:14:08 PM</span>
-<span class='badge badge-default'>00:00:31:115</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:14:08 PM</td>
-        <td>
-          ✅ Test passed: verifyMultipleConditions
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="8"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyTitleAndURL</p>
-            <p class="text-sm">
-              <span>1:14:11 PM</span> / <span>00:00:01:128</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyTitleAndURL</h5>
-<span class='badge badge-success'>11.12.2025 1:14:11 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:14:12 PM</span>
-<span class='badge badge-default'>00:00:01:128</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:14:12 PM</td>
-        <td>
-          ✅ Test passed: verifyTitleAndURL
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="9"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyTitleAndURL_Pass</p>
-            <p class="text-sm">
-              <span>1:14:14 PM</span> / <span>00:00:31:101</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyTitleAndURL_Pass</h5>
-<span class='badge badge-success'>11.12.2025 1:14:14 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:14:46 PM</span>
-<span class='badge badge-default'>00:00:31:101</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:14:45 PM</td>
-        <td>
-          ✅ Test passed: verifyTitleAndURL_Pass
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="10"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyButtonBecomesEnabled</p>
-            <p class="text-sm">
-              <span>1:14:48 PM</span> / <span>00:00:08:387</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyButtonBecomesEnabled</h5>
-<span class='badge badge-success'>11.12.2025 1:14:48 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:14:56 PM</span>
-<span class='badge badge-default'>00:00:08:387</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:14:56 PM</td>
-        <td>
-          ✅ Test passed: verifyButtonBecomesEnabled
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="11"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyButtonBecomesVisible</p>
-            <p class="text-sm">
-              <span>1:14:59 PM</span> / <span>00:00:08:156</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyButtonBecomesVisible</h5>
-<span class='badge badge-success'>11.12.2025 1:14:59 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:15:07 PM</span>
-<span class='badge badge-default'>00:00:08:156</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:15:06 PM</td>
-        <td>
-          ✅ Test passed: verifyButtonBecomesVisible
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="12"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyColorChangeWithFluentWait</p>
-            <p class="text-sm">
-              <span>1:15:11 PM</span> / <span>00:00:07:595</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyColorChangeWithFluentWait</h5>
-<span class='badge badge-success'>11.12.2025 1:15:11 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:15:18 PM</span>
-<span class='badge badge-default'>00:00:07:595</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:15:18 PM</td>
-        <td>
-          ✅ Test passed: verifyColorChangeWithFluentWait
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyJSExecutorClick</p>
-            <p class="text-sm">
-              <span>1:15:22 PM</span> / <span>00:00:14:536</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyJSExecutorClick</h5>
-<span class='badge badge-success'>11.12.2025 1:15:22 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:15:37 PM</span>
-<span class='badge badge-default'>00:00:14:536</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:15:37 PM</td>
-        <td>
-          ✅ Test passed: verifyJSExecutorClick
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="14"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyLogin</p>
-            <p class="text-sm">
-              <span>1:15:41 PM</span> / <span>00:00:00:174</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyLogin</h5>
-<span class='badge badge-success'>11.12.2025 1:15:41 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:15:41 PM</span>
-<span class='badge badge-default'>00:00:00:174</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:15:41 PM</td>
-        <td>
-          ✅ Test passed: verifyLogin
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="15"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyExcelLogin</p>
-            <p class="text-sm">
-              <span>1:15:43 PM</span> / <span>00:00:00:186</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyExcelLogin</h5>
-<span class='badge badge-success'>11.12.2025 1:15:43 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:15:44 PM</span>
-<span class='badge badge-default'>00:00:00:186</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:15:43 PM</td>
-        <td>
-          ✅ Test passed: verifyExcelLogin
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="16"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">debugJson</p>
-            <p class="text-sm">
-              <span>1:15:46 PM</span> / <span>00:00:00:211</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">debugJson</h5>
-<span class='badge badge-success'>11.12.2025 1:15:46 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:15:46 PM</span>
-<span class='badge badge-default'>00:00:00:211</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/debugJson_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/debugJson_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:15:46 PM</td>
-        <td>
-          ✅ Test passed: debugJson
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="17"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyJsonLogin</p>
-            <p class="text-sm">
-              <span>1:15:48 PM</span> / <span>00:00:00:211</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyJsonLogin</h5>
-<span class='badge badge-success'>11.12.2025 1:15:48 PM</span>
-<span class='badge badge-danger'>11.12.2025 1:15:48 PM</span>
-<span class='badge badge-default'>00:00:00:211</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png' src="D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:15:48 PM</td>
-        <td>
-          ✅ Test passed: verifyJsonLogin
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown" onclick="toggleView('test-view')">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
   </div>
-<div class="test-content scrollable">
-<div class="test-content-tools">
-<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>            <div class="vcontainer">
+                <div class="main-content">
+<div class="test-wrapper row test-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tests</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-exclamation-circle"></i>
+					</a>
+					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+						
+						
+						
+						
+						
+						<div class="dropdown-divider"></div>
+						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item"  status="pass" test-id="1"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyNewTabHeading</p>
+							<p class="duration text-sm">0h 0m 0s+1ms</p>
+							<span class="datetime">01:22:35 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyNewTabHeading</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:35</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:35</span>
+									<span class='badge badge-default'>0h 0m 0s+1ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="2"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyNewTabHeading</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:35 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyNewTabHeading</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:35</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:35</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="3"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyNewTabHeading</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:36 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyNewTabHeading</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:36</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:36</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="4"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyNewTabHeading</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:36 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyNewTabHeading</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:36</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:36</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="5"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyNewTabHeading</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:36 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyNewTabHeading</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:36</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:36</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="6"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyNewTabHeading</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:36 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyNewTabHeading</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:36</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:36</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="7"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyNewTabHeading</p>
+							<p class="duration text-sm">0h 0m 9s+927ms</p>
+							<span class="datetime">01:22:36 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyNewTabHeading</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:36</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:45</span>
+									<span class='badge badge-default'>0h 0m 9s+927ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:44 AM</td>
+				<td>
+						✅ Test passed: verifyNewTabHeading
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:44 AM</td>
+				<td>
+						✅ Test passed: verifyNewTabHeading
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:45 AM</td>
+				<td>
+						✅ Test passed: verifyNewTabHeading
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:45 AM</td>
+				<td>
+						✅ Test passed: verifyNewTabHeading
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:45 AM</td>
+				<td>
+						✅ Test passed: verifyNewTabHeading
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:45 AM</td>
+				<td>
+						✅ Test passed: verifyNewTabHeading
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:45 AM</td>
+				<td>
+						✅ Test passed: verifyNewTabHeading
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
-<div class="test-content-detail"><div class="detail-body"></div></div>
-</div></div>
-<div class="container-fluid p-4 view dashboard-view">
-<div class="row">
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0">Started</p>
-<h3>Nov 12, 2025 01:12:38 PM</h3>
-</div></div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyNewTabHeading_PASS.png'>
+	</ul>
 </div>
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0">Ended</p>
-<h3>Nov 12, 2025 01:15:49 PM</h3>
-</div></div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="8"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTextInsideFrames</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:49 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:49</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:49</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="9"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTextInsideFrames</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:49 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:49</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:49</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="10"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTextInsideFrames</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:49 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:49</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:49</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="11"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTextInsideFrames</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:49 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:49</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:49</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="12"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTextInsideFrames</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:49 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:49</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:49</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="13"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTextInsideFrames</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:22:49 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:49</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:49</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="14"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTextInsideFrames</p>
+							<p class="duration text-sm">0h 0m 9s+487ms</p>
+							<span class="datetime">01:22:49 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTextInsideFrames</h5>
+									<span class='badge badge-success'>11.13.2025 01:22:49</span>
+									<span class='badge badge-danger'>11.13.2025 01:22:58</span>
+									<span class='badge badge-default'>0h 0m 9s+487ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:56 AM</td>
+				<td>
+						✅ Test passed: verifyTextInsideFrames
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:56 AM</td>
+				<td>
+						✅ Test passed: verifyTextInsideFrames
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:57 AM</td>
+				<td>
+						✅ Test passed: verifyTextInsideFrames
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:57 AM</td>
+				<td>
+						✅ Test passed: verifyTextInsideFrames
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:58 AM</td>
+				<td>
+						✅ Test passed: verifyTextInsideFrames
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:58 AM</td>
+				<td>
+						✅ Test passed: verifyTextInsideFrames
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:22:58 AM</td>
+				<td>
+						✅ Test passed: verifyTextInsideFrames
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0 text-pass">Tests Passed</p>
-<h3>17</h3>
-</div></div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTextInsideFrames_PASS.png'>
+	</ul>
 </div>
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
-</div></div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="15"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyConfirmAlertAccept</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:01 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:01</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:01</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="16"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyConfirmAlertAccept</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:01 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:01</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:01</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="17"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyConfirmAlertAccept</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:01 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:01</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:01</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="18"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyConfirmAlertAccept</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:01 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:01</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:01</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="19"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyConfirmAlertAccept</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:01 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:01</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:01</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="20"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyConfirmAlertAccept</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:01 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:01</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:01</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="21"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyConfirmAlertAccept</p>
+							<p class="duration text-sm">0h 0m 9s+413ms</p>
+							<span class="datetime">01:23:01 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyConfirmAlertAccept</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:01</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:11</span>
+									<span class='badge badge-default'>0h 0m 9s+413ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:09 AM</td>
+				<td>
+						✅ Test passed: verifyConfirmAlertAccept
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:09 AM</td>
+				<td>
+						✅ Test passed: verifyConfirmAlertAccept
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:10 AM</td>
+				<td>
+						✅ Test passed: verifyConfirmAlertAccept
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:10 AM</td>
+				<td>
+						✅ Test passed: verifyConfirmAlertAccept
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:10 AM</td>
+				<td>
+						✅ Test passed: verifyConfirmAlertAccept
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:11 AM</td>
+				<td>
+						✅ Test passed: verifyConfirmAlertAccept
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:11 AM</td>
+				<td>
+						✅ Test passed: verifyConfirmAlertAccept
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyConfirmAlertAccept_PASS.png'>
+	</ul>
 </div>
-<div class="row">
-<div class="col-md-6">
-<div class="card">
-<div class="card-header">
-<h6 class="card-title">Tests</h6>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="22"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyPromptAlert</p>
+							<p class="duration text-sm">0h 0m 0s+1ms</p>
+							<span class="datetime">01:23:14 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyPromptAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:14</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:14</span>
+									<span class='badge badge-default'>0h 0m 0s+1ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="23"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyPromptAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:14 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyPromptAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:14</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:14</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="24"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyPromptAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:14 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyPromptAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:14</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:14</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="25"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyPromptAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:14 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyPromptAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:14</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:14</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="26"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyPromptAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:14 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyPromptAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:14</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:14</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="27"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyPromptAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:14 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyPromptAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:14</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:14</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="28"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyPromptAlert</p>
+							<p class="duration text-sm">0h 0m 11s+875ms</p>
+							<span class="datetime">01:23:14 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyPromptAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:14</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:25</span>
+									<span class='badge badge-default'>0h 0m 11s+875ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:24 AM</td>
+				<td>
+						✅ Test passed: verifyPromptAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:24 AM</td>
+				<td>
+						✅ Test passed: verifyPromptAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:25 AM</td>
+				<td>
+						✅ Test passed: verifyPromptAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:25 AM</td>
+				<td>
+						✅ Test passed: verifyPromptAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:25 AM</td>
+				<td>
+						✅ Test passed: verifyPromptAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:25 AM</td>
+				<td>
+						✅ Test passed: verifyPromptAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:25 AM</td>
+				<td>
+						✅ Test passed: verifyPromptAlert
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
-<div class="card-body">
-<div class="">
-<canvas id='parent-analysis' width='115' height='90'></canvas>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyPromptAlert_PASS.png'>
+	</ul>
 </div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="29"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifySimpleAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:28 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifySimpleAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:28</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:28</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="30"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifySimpleAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:28 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifySimpleAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:28</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:28</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="31"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifySimpleAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:28 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifySimpleAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:28</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:28</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="32"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifySimpleAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:28 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifySimpleAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:28</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:28</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="33"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifySimpleAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:28 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifySimpleAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:28</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:28</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="34"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifySimpleAlert</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:28 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifySimpleAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:28</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:28</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="35"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifySimpleAlert</p>
+							<p class="duration text-sm">0h 0m 9s+534ms</p>
+							<span class="datetime">01:23:28 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifySimpleAlert</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:28</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:38</span>
+									<span class='badge badge-default'>0h 0m 9s+534ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:35 AM</td>
+				<td>
+						✅ Test passed: verifySimpleAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:36 AM</td>
+				<td>
+						✅ Test passed: verifySimpleAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:36 AM</td>
+				<td>
+						✅ Test passed: verifySimpleAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:36 AM</td>
+				<td>
+						✅ Test passed: verifySimpleAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:37 AM</td>
+				<td>
+						✅ Test passed: verifySimpleAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:37 AM</td>
+				<td>
+						✅ Test passed: verifySimpleAlert
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:38 AM</td>
+				<td>
+						✅ Test passed: verifySimpleAlert
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
-<div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>17</b> tests passed
-</small>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifySimpleAlert_PASS.png'>
+	</ul>
 </div>
-<div>
-<small data-tooltip='0%'><b>0</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
-</small>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="36"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyElementText</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyElementText</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:42</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="37"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyElementText</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyElementText</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:42</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="38"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyElementText</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyElementText</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:42</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="39"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyElementText</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyElementText</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:42</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="40"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyElementText</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyElementText</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:42</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="41"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyElementText</p>
+							<p class="duration text-sm">0h 0m 13s+625ms</p>
+							<span class="datetime">01:23:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyElementText</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:55</span>
+									<span class='badge badge-default'>0h 0m 13s+625ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:54 AM</td>
+				<td>
+						✅ Test passed: verifyElementText
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:55 AM</td>
+				<td>
+						✅ Test passed: verifyElementText
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:55 AM</td>
+				<td>
+						✅ Test passed: verifyElementText
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:55 AM</td>
+				<td>
+						✅ Test passed: verifyElementText
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:55 AM</td>
+				<td>
+						✅ Test passed: verifyElementText
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:23:55 AM</td>
+				<td>
+						✅ Test passed: verifyElementText
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyElementText_PASS.png'>
+	</ul>
 </div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="42"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyMultipleConditions</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:58 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyMultipleConditions</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:58</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:58</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="43"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyMultipleConditions</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:58 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyMultipleConditions</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:58</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:58</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="44"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyMultipleConditions</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:58 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyMultipleConditions</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:58</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:58</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="45"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyMultipleConditions</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:58 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyMultipleConditions</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:58</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:58</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="46"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyMultipleConditions</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:23:58 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyMultipleConditions</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:58</span>
+									<span class='badge badge-danger'>11.13.2025 01:23:58</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="47"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyMultipleConditions</p>
+							<p class="duration text-sm">0h 0m 4s+398ms</p>
+							<span class="datetime">01:23:58 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyMultipleConditions</h5>
+									<span class='badge badge-success'>11.13.2025 01:23:58</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:02</span>
+									<span class='badge badge-default'>0h 0m 4s+398ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:01 AM</td>
+				<td>
+						✅ Test passed: verifyMultipleConditions
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:01 AM</td>
+				<td>
+						✅ Test passed: verifyMultipleConditions
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:02 AM</td>
+				<td>
+						✅ Test passed: verifyMultipleConditions
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:02 AM</td>
+				<td>
+						✅ Test passed: verifyMultipleConditions
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:02 AM</td>
+				<td>
+						✅ Test passed: verifyMultipleConditions
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:02 AM</td>
+				<td>
+						✅ Test passed: verifyMultipleConditions
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyMultipleConditions_PASS.png'>
+	</ul>
 </div>
-<div class="col-md-6">
-<div class="card">
-<div class="card-header">
-<h6 class="card-title">Log events</h6>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="48"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:05 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:05</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:05</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="49"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:05 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:05</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:05</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="50"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:05 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:05</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:05</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="51"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:05 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:05</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:05</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="52"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:05 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:05</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:05</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="53"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL</p>
+							<p class="duration text-sm">0h 0m 4s+208ms</p>
+							<span class="datetime">01:24:05 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:05</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:09</span>
+									<span class='badge badge-default'>0h 0m 4s+208ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:08 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:08 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:09 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:09 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:09 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:09 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
-<div class="card-body">
-<div class="">
-<canvas id='events-analysis' width='115' height='90'></canvas>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_PASS.png'>
+	</ul>
 </div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="54"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL_Pass</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:12 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL_Pass</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:12</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:12</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="55"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL_Pass</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:12 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL_Pass</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:12</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:12</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="56"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL_Pass</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:12 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL_Pass</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:12</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:12</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="57"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL_Pass</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:12 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL_Pass</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:12</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:12</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="58"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL_Pass</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:12 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL_Pass</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:12</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:12</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="59"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyTitleAndURL_Pass</p>
+							<p class="duration text-sm">0h 0m 4s+361ms</p>
+							<span class="datetime">01:24:12 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyTitleAndURL_Pass</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:12</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:16</span>
+									<span class='badge badge-default'>0h 0m 4s+361ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:15 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL_Pass
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:15 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL_Pass
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:16 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL_Pass
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:16 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL_Pass
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:16 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL_Pass
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:16 AM</td>
+				<td>
+						✅ Test passed: verifyTitleAndURL_Pass
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
-<div class="card-footer">
-<div><small data-tooltip='100%'><b>17</b> events passed</small></div>
-<div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
-</small>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyTitleAndURL_Pass_PASS.png'>
+	</ul>
 </div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="60"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesEnabled</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:19 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesEnabled</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:19</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:19</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="61"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesEnabled</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:19 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesEnabled</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:19</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:19</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="62"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesEnabled</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:19 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesEnabled</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:19</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:19</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="63"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesEnabled</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:19 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesEnabled</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:19</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:19</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="64"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesEnabled</p>
+							<p class="duration text-sm">0h 0m 15s+293ms</p>
+							<span class="datetime">01:24:19 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesEnabled</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:19</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:34</span>
+									<span class='badge badge-default'>0h 0m 15s+293ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:33 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesEnabled
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:33 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesEnabled
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:34 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesEnabled
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:34 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesEnabled
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:34 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesEnabled
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesEnabled_PASS.png'>
+	</ul>
 </div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="65"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesVisible</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:37 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesVisible</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:37</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:37</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="66"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesVisible</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:37 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesVisible</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:37</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:37</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="67"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesVisible</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:37 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesVisible</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:37</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:37</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="68"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesVisible</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:37 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesVisible</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:37</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:37</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="69"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyButtonBecomesVisible</p>
+							<p class="duration text-sm">0h 0m 12s+263ms</p>
+							<span class="datetime">01:24:37 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyButtonBecomesVisible</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:37</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:50</span>
+									<span class='badge badge-default'>0h 0m 12s+263ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:48 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesVisible
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:49 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesVisible
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:49 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesVisible
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:49 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesVisible
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:24:50 AM</td>
+				<td>
+						✅ Test passed: verifyButtonBecomesVisible
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyButtonBecomesVisible_PASS.png'>
+	</ul>
 </div>
-<div class="row"><div class="col-md-12">
-<div class="card"><div class="card-header"><p>Timeline</p></div>
-<div class="card-body pt-0"><div>
-<canvas id="timeline" height="120"></canvas>
-</div></div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="70"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyColorChangeWithFluentWait</p>
+							<p class="duration text-sm">0h 0m 0s+1ms</p>
+							<span class="datetime">01:24:54 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyColorChangeWithFluentWait</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:54</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:54</span>
+									<span class='badge badge-default'>0h 0m 0s+1ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="71"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyColorChangeWithFluentWait</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:54 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyColorChangeWithFluentWait</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:54</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:54</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="72"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyColorChangeWithFluentWait</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:54 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyColorChangeWithFluentWait</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:54</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:54</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="73"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyColorChangeWithFluentWait</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:24:54 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyColorChangeWithFluentWait</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:54</span>
+									<span class='badge badge-danger'>11.13.2025 01:24:54</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="74"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyColorChangeWithFluentWait</p>
+							<p class="duration text-sm">0h 0m 12s+754ms</p>
+							<span class="datetime">01:24:54 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyColorChangeWithFluentWait</h5>
+									<span class='badge badge-success'>11.13.2025 01:24:54</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:06</span>
+									<span class='badge badge-default'>0h 0m 12s+754ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:05 AM</td>
+				<td>
+						✅ Test passed: verifyColorChangeWithFluentWait
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:05 AM</td>
+				<td>
+						✅ Test passed: verifyColorChangeWithFluentWait
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:06 AM</td>
+				<td>
+						✅ Test passed: verifyColorChangeWithFluentWait
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:06 AM</td>
+				<td>
+						✅ Test passed: verifyColorChangeWithFluentWait
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:06 AM</td>
+				<td>
+						✅ Test passed: verifyColorChangeWithFluentWait
+				</td>
+			</tr>
+	</tbody>
+</table>
 </div>
-</div></div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyColorChangeWithFluentWait_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="75"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJSExecutorClick</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:10 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJSExecutorClick</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:10</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:10</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="76"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJSExecutorClick</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:10 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJSExecutorClick</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:10</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:10</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="77"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJSExecutorClick</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:10 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJSExecutorClick</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:10</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:10</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="78"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJSExecutorClick</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:10 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJSExecutorClick</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:10</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:10</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="79"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJSExecutorClick</p>
+							<p class="duration text-sm">0h 0m 18s+127ms</p>
+							<span class="datetime">01:25:10 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJSExecutorClick</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:10</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:28</span>
+									<span class='badge badge-default'>0h 0m 18s+127ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:27 AM</td>
+				<td>
+						✅ Test passed: verifyJSExecutorClick
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:27 AM</td>
+				<td>
+						✅ Test passed: verifyJSExecutorClick
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:28 AM</td>
+				<td>
+						✅ Test passed: verifyJSExecutorClick
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:28 AM</td>
+				<td>
+						✅ Test passed: verifyJSExecutorClick
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:28 AM</td>
+				<td>
+						✅ Test passed: verifyJSExecutorClick
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJSExecutorClick_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="80"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:31 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:31</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:31</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="81"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:31 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:31</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:31</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="82"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:31 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:31</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:31</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="83"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyLogin</p>
+							<p class="duration text-sm">0h 0m 0s+405ms</p>
+							<span class="datetime">01:25:31 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:31</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:32</span>
+									<span class='badge badge-default'>0h 0m 0s+405ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:31 AM</td>
+				<td>
+						✅ Test passed: verifyLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:31 AM</td>
+				<td>
+						✅ Test passed: verifyLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:31 AM</td>
+				<td>
+						✅ Test passed: verifyLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:32 AM</td>
+				<td>
+						✅ Test passed: verifyLogin
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyLogin_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="84"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyExcelLogin</p>
+							<p class="duration text-sm">0h 0m 0s+1ms</p>
+							<span class="datetime">01:25:34 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyExcelLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:34</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:34</span>
+									<span class='badge badge-default'>0h 0m 0s+1ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="85"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyExcelLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:34 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyExcelLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:34</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:34</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="86"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyExcelLogin</p>
+							<p class="duration text-sm">0h 0m 0s+303ms</p>
+							<span class="datetime">01:25:34 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyExcelLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:34</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:35</span>
+									<span class='badge badge-default'>0h 0m 0s+303ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:34 AM</td>
+				<td>
+						✅ Test passed: verifyExcelLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:35 AM</td>
+				<td>
+						✅ Test passed: verifyExcelLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:35 AM</td>
+				<td>
+						✅ Test passed: verifyExcelLogin
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyExcelLogin_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="87"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">debugJson</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:37 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">debugJson</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:37</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:37</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="88"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">debugJson</p>
+							<p class="duration text-sm">0h 0m 0s+195ms</p>
+							<span class="datetime">01:25:37 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">debugJson</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:37</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:37</span>
+									<span class='badge badge-default'>0h 0m 0s+195ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:37 AM</td>
+				<td>
+						✅ Test passed: debugJson
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:37 AM</td>
+				<td>
+						✅ Test passed: debugJson
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/debugJson_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/debugJson_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/debugJson_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/debugJson_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="89"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJsonLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:40 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJsonLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:40</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:40</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="90"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJsonLogin</p>
+							<p class="duration text-sm">0h 0m 0s+181ms</p>
+							<span class="datetime">01:25:40 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJsonLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:40</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:40</span>
+									<span class='badge badge-default'>0h 0m 0s+181ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:40 AM</td>
+				<td>
+						✅ Test passed: verifyJsonLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:40 AM</td>
+				<td>
+						✅ Test passed: verifyJsonLogin
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="91"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJsonLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJsonLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:42</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="92"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJsonLogin</p>
+							<p class="duration text-sm">0h 0m 0s+201ms</p>
+							<span class="datetime">01:25:42 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJsonLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:42</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:42</span>
+									<span class='badge badge-default'>0h 0m 0s+201ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:42 AM</td>
+				<td>
+						✅ Test passed: verifyJsonLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:42 AM</td>
+				<td>
+						✅ Test passed: verifyJsonLogin
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="93"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJsonLogin</p>
+							<p class="duration text-sm">0h 0m 0s+0ms</p>
+							<span class="datetime">01:25:45 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJsonLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:45</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:45</span>
+									<span class='badge badge-default'>0h 0m 0s+0ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="test-item"  status="pass" test-id="94"
+					author=""
+					tag=""
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">verifyJsonLogin</p>
+							<p class="duration text-sm">0h 0m 0s+176ms</p>
+							<span class="datetime">01:25:45 AM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">verifyJsonLogin</h5>
+									<span class='badge badge-success'>11.13.2025 01:25:45</span>
+									<span class='badge badge-danger'>11.13.2025 01:25:45</span>
+									<span class='badge badge-default'>0h 0m 0s+176ms</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:45 AM</td>
+				<td>
+						✅ Test passed: verifyJsonLogin
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>1:25:45 AM</td>
+				<td>
+						✅ Test passed: verifyJsonLogin
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<div class="detail-foot">
+	<ul class="attachments">
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png'>
+			<img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png' src='D:\Projects\selenium-demoqa-intermediate/test-output/screenshots/verifyJsonLogin_PASS.png'>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div>                    <!-- dashboard -->
+<div class="container-fluid p-4 dashboard-view">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Tests</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='parent-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='100%'>
+						<b>94</b> tests passed
+						</small>
+					</div>
+					<div>
+						<small data-tooltip='0%'><b>0</b> tests failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Log events</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='events-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='100%'><b>94</b> events passed</small></div>
+					<div>
+						<small data-tooltip='0%'><b>0</b> events failed, 
+						<b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Tests</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">94</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>100.00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Start</h6>
+							<h4 class="font-weight-light mt-4">Nov 13, 2025 01:22:31 AM</h4>
+							<span class="text-semibold text-success font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Duration</h6>
+							<h4 class="font-weight-light mt-4">0h 3m 14s+977ms</h4>
+							<span class="text-semibold font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Timeline</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id="timeline" height="120"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Environment</h6>
+				</div>
+				<div class="table-overflow">
+					<table class="table table-sm">
+						<thead>
+							<tr class="bg-gray">
+								<th>Name</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Tester</td>
+								<td>Sachin Bende</td>
+							</tr>
+							<tr>
+								<td>Environment</td>
+								<td>QA</td>
+							</tr>
+							<tr>
+								<td>Browser</td>
+								<td>Chrome</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
-var timeline = {
-"verifyNewTabHeading":5.589,"verifyTextInsideFrames":4.221,"verifyConfirmAlertAccept":3.862,"verifyPromptAlert":14.69,"verifySimpleAlert":4.961,"verifyElementText":3.353,"verifyMultipleConditions":31.115,"verifyTitleAndURL":1.128,"verifyTitleAndURL_Pass":31.101,"verifyButtonBecomesEnabled":8.387,"verifyButtonBecomesVisible":8.156,"verifyColorChangeWithFluentWait":7.595,"verifyJSExecutorClick":14.536,"verifyLogin":0.174,"verifyExcelLogin":0.186,"debugJson":0.211,"verifyJsonLogin":0.211
-};
+	var statusGroup = {
+	    parentCount: 94,
+		passParent: 94,
+		failParent: 0,
+		fatalParent: 0,
+		errorParent: 0,
+		warningParent: 0,
+		skipParent: 0,
+		exceptionsParent: 0,
+		childCount: 0,
+		passChild: 0,
+		failChild: 0,
+		fatalChild: 0,
+		errorChild: 0,
+		warningChild: 0,
+		skipChild: 0,
+		infoChild: 0,
+		debugChild: 0,
+		exceptionsChild: 0,
+		grandChildCount: 0,
+		passGrandChild: 0,
+		failGrandChild: 0,
+		fatalGrandChild: 0,
+		errorGrandChild: 0,
+		warningGrandChild: 0,
+		skipGrandChild: 0,
+		infoGrandChild: 0,
+		debugGrandChild: 0,
+		exceptionsGrandChild: 0,
+		eventsCount: 94,
+		passEvents: 94,
+		failEvents: 0,
+		fatalEvents: 0,
+		errorEvents: 0,
+		warningEvents: 0,
+		skipEvents: 0,
+		infoEvents: 0,
+		debugEvents: 0,
+		exceptionsEvents: 0
+	};
 </script>
-<div class="row">
-<div class="col-lg-6 col-md-12 sysenv-container">
-<div class="card">
-<div class="card-header"><p>System/Environment</p></div>
-<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
-<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
-<tbody>
-<tr>
-<td>Tester</td>
-<td>Sachin Bende</td>
-</tr>
-<tr>
-<td>Environment</td>
-<td>QA</td>
-</tr>
-<tr>
-<td>Browser</td>
-<td>Chrome</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-</div>
-</div>
 <script>
-var statusGroup = {
-parentCount: 5,
-passParent: 17,
-failParent: 0,
-warningParent: 0,
-skipParent: 0,
-childCount: 5,
-passChild: 0,
-failChild: 0,
-warningChild: 0,
-skipChild: 0,
-infoChild: 0,
-grandChildCount: 5,
-passGrandChild: 0,
-failGrandChild: 0,
-warningGrandChild: 0,
-skipGrandChild: 0,
-infoGrandChild: 0,
-eventsCount: 5,
-passEvents: 17,
-failEvents: 0,
-warningEvents: 0,
-skipEvents: 0,
-infoEvents: 0
-};
-</script>        </div>
-      </div>
+	var timeline = {
+	        "verifyNewTabHeading":0.001,"verifyNewTabHeading":0,"verifyNewTabHeading":0,"verifyNewTabHeading":0,"verifyNewTabHeading":0,"verifyNewTabHeading":0,"verifyNewTabHeading":9.927,"verifyTextInsideFrames":0,"verifyTextInsideFrames":0,"verifyTextInsideFrames":0,"verifyTextInsideFrames":0,"verifyTextInsideFrames":0,"verifyTextInsideFrames":0,"verifyTextInsideFrames":9.487,"verifyConfirmAlertAccept":0,"verifyConfirmAlertAccept":0,"verifyConfirmAlertAccept":0,"verifyConfirmAlertAccept":0,"verifyConfirmAlertAccept":0,"verifyConfirmAlertAccept":0,"verifyConfirmAlertAccept":9.413,"verifyPromptAlert":0.001,"verifyPromptAlert":0,"verifyPromptAlert":0,"verifyPromptAlert":0,"verifyPromptAlert":0,"verifyPromptAlert":0,"verifyPromptAlert":11.875,"verifySimpleAlert":0,"verifySimpleAlert":0,"verifySimpleAlert":0,"verifySimpleAlert":0,"verifySimpleAlert":0,"verifySimpleAlert":0,"verifySimpleAlert":9.534,"verifyElementText":0,"verifyElementText":0,"verifyElementText":0,"verifyElementText":0,"verifyElementText":0,"verifyElementText":13.625,"verifyMultipleConditions":0,"verifyMultipleConditions":0,"verifyMultipleConditions":0,"verifyMultipleConditions":0,"verifyMultipleConditions":0,"verifyMultipleConditions":4.398,"verifyTitleAndURL":0,"verifyTitleAndURL":0,"verifyTitleAndURL":0,"verifyTitleAndURL":0,"verifyTitleAndURL":0,"verifyTitleAndURL":4.208,"verifyTitleAndURL_Pass":0,"verifyTitleAndURL_Pass":0,"verifyTitleAndURL_Pass":0,"verifyTitleAndURL_Pass":0,"verifyTitleAndURL_Pass":0,"verifyTitleAndURL_Pass":4.361,"verifyButtonBecomesEnabled":0,"verifyButtonBecomesEnabled":0,"verifyButtonBecomesEnabled":0,"verifyButtonBecomesEnabled":0,"verifyButtonBecomesEnabled":15.293,"verifyButtonBecomesVisible":0,"verifyButtonBecomesVisible":0,"verifyButtonBecomesVisible":0,"verifyButtonBecomesVisible":0,"verifyButtonBecomesVisible":12.263,"verifyColorChangeWithFluentWait":0.001,"verifyColorChangeWithFluentWait":0,"verifyColorChangeWithFluentWait":0,"verifyColorChangeWithFluentWait":0,"verifyColorChangeWithFluentWait":12.754,"verifyJSExecutorClick":0,"verifyJSExecutorClick":0,"verifyJSExecutorClick":0,"verifyJSExecutorClick":0,"verifyJSExecutorClick":18.127,"verifyLogin":0,"verifyLogin":0,"verifyLogin":0,"verifyLogin":0.405,"verifyExcelLogin":0.001,"verifyExcelLogin":0,"verifyExcelLogin":0.303,"debugJson":0,"debugJson":0.195,"verifyJsonLogin":0,"verifyJsonLogin":0.181,"verifyJsonLogin":0,"verifyJsonLogin":0.201,"verifyJsonLogin":0,"verifyJsonLogin":0.176
+	};
+</script>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
-<script type="text/javascript"></script></body>
+    <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ac7abbc71b4bb073da00153a5a3fdbcfe0c95e2a/spark/js/spark-script.js"></script>
+<script type="text/javascript">
+
+
+</script></body>
 </html>

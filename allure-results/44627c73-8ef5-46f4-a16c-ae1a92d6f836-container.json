@@ -1,0 +1,1 @@
+{"uuid":"44627c73-8ef5-46f4-a16c-ae1a92d6f836","name":"com.demoqa.tests.BaseTest.setup","children":["3611b566-4f1c-47ee-b7d7-418c57a37767"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1762975771616,"stop":1762975773250}],"afters":[],"start":1762975771616,"stop":1762975773250}

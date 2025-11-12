@@ -1,0 +1,219 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>28/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 13 00:55:59 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>265 seconds (265615 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.demoqa.tests.JsonDataProviderTests.debugJson()'><b>debugJson</b><br>Test class: com.demoqa.tests.JsonDataProviderTests</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.JsonDataProviderTests@f1da57d</td></tr>
+<tr>
+<td title='com.demoqa.tests.TestNGAdvancedTests.dependentTest()'><b>dependentTest</b><br>Test class: com.demoqa.tests.TestNGAdvancedTests</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.TestNGAdvancedTests@194fad1</td></tr>
+<tr>
+<td title='com.demoqa.tests.TestNGAdvancedTests.regressionTest()'><b>regressionTest</b><br>Test class: com.demoqa.tests.TestNGAdvancedTests</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.TestNGAdvancedTests@194fad1</td></tr>
+<tr>
+<td title='com.demoqa.tests.TestNGAdvancedTests.smokeTest()'><b>smokeTest</b><br>Test class: com.demoqa.tests.TestNGAdvancedTests</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.TestNGAdvancedTests@194fad1</td></tr>
+<tr>
+<td title='com.demoqa.tests.TestNGAdvancedTests.verifyBrowserParameter()'><b>verifyBrowserParameter</b><br>Test class: com.demoqa.tests.TestNGAdvancedTests<br>Parameters: chrome</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.TestNGAdvancedTests@194fad1</td></tr>
+<tr>
+<td title='com.demoqa.tests.WaitsTests.verifyButtonBecomesEnabled()'><b>verifyButtonBecomesEnabled</b><br>Test class: com.demoqa.tests.WaitsTests</td>
+<td></td>
+<td>19</td>
+<td>com.demoqa.tests.WaitsTests@26abb146</td></tr>
+<tr>
+<td title='com.demoqa.tests.WaitsTests.verifyButtonBecomesVisible()'><b>verifyButtonBecomesVisible</b><br>Test class: com.demoqa.tests.WaitsTests</td>
+<td></td>
+<td>12</td>
+<td>com.demoqa.tests.WaitsTests@26abb146</td></tr>
+<tr>
+<td title='com.demoqa.tests.WaitsTests.verifyColorChangeWithFluentWait()'><b>verifyColorChangeWithFluentWait</b><br>Test class: com.demoqa.tests.WaitsTests</td>
+<td></td>
+<td>17</td>
+<td>com.demoqa.tests.WaitsTests@26abb146</td></tr>
+<tr>
+<td title='com.demoqa.tests.AlertsTests.verifyConfirmAlertAccept()'><b>verifyConfirmAlertAccept</b><br>Test class: com.demoqa.tests.AlertsTests</td>
+<td></td>
+<td>34</td>
+<td>com.demoqa.tests.AlertsTests@5b38c1ec</td></tr>
+<tr>
+<td title='com.demoqa.tests.AssertionsTests.verifyElementText()'><b>verifyElementText</b><br>Test class: com.demoqa.tests.AssertionsTests</td>
+<td></td>
+<td>8</td>
+<td>com.demoqa.tests.AssertionsTests@338fc1d8</td></tr>
+<tr>
+<td title='com.demoqa.tests.DataPoolTests.verifyExcelDataRead()'><b>verifyExcelDataRead</b><br>Test class: com.demoqa.tests.DataPoolTests</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.DataPoolTests@48e1f6c7</td></tr>
+<tr>
+<td title='com.demoqa.tests.ExcelDataProviderTests.verifyExcelLogin()'><b>verifyExcelLogin</b><br>Test class: com.demoqa.tests.ExcelDataProviderTests<br>Parameters: admin, admin123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.ExcelDataProviderTests@1807e3f6</td></tr>
+<tr>
+<td title='com.demoqa.tests.WaitsTests.verifyJSExecutorClick()'><b>verifyJSExecutorClick</b><br>Test class: com.demoqa.tests.WaitsTests</td>
+<td></td>
+<td>29</td>
+<td>com.demoqa.tests.WaitsTests@26abb146</td></tr>
+<tr>
+<td title='com.demoqa.tests.JsonDataProviderTests.verifyJsonLogin()'><b>verifyJsonLogin</b><br>Test class: com.demoqa.tests.JsonDataProviderTests<br>Parameters: admin, admin123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.JsonDataProviderTests@f1da57d</td></tr>
+<tr>
+<td title='com.demoqa.tests.JsonDataProviderTests.verifyJsonLogin()'><b>verifyJsonLogin</b><br>Test class: com.demoqa.tests.JsonDataProviderTests<br>Parameters: tester, test@123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.JsonDataProviderTests@f1da57d</td></tr>
+<tr>
+<td title='com.demoqa.tests.JsonDataProviderTests.verifyJsonLogin()'><b>verifyJsonLogin</b><br>Test class: com.demoqa.tests.JsonDataProviderTests<br>Parameters: user, pass123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.JsonDataProviderTests@f1da57d</td></tr>
+<tr>
+<td title='com.demoqa.tests.DataProviderTests.verifyLogin()'><b>verifyLogin</b><br>Test class: com.demoqa.tests.DataProviderTests<br>Parameters: admin, admin123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.DataProviderTests@55cb6996</td></tr>
+<tr>
+<td title='com.demoqa.tests.TestNGAdvancedTests.verifyLoginData()'><b>verifyLoginData</b><br>Test class: com.demoqa.tests.TestNGAdvancedTests<br>Parameters: admin, admin123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.TestNGAdvancedTests@194fad1</td></tr>
+<tr>
+<td title='com.demoqa.tests.TestNGAdvancedTests.verifyLoginData()'><b>verifyLoginData</b><br>Test class: com.demoqa.tests.TestNGAdvancedTests<br>Parameters: sachin, test123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.TestNGAdvancedTests@194fad1</td></tr>
+<tr>
+<td title='com.demoqa.tests.TestNGAdvancedTests.verifyLoginData()'><b>verifyLoginData</b><br>Test class: com.demoqa.tests.TestNGAdvancedTests<br>Parameters: guest, guest@123</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.TestNGAdvancedTests@194fad1</td></tr>
+<tr>
+<td title='com.demoqa.tests.AssertionsTests.verifyMultipleConditions()'><b>verifyMultipleConditions</b><br>Test class: com.demoqa.tests.AssertionsTests</td>
+<td></td>
+<td>10</td>
+<td>com.demoqa.tests.AssertionsTests@338fc1d8</td></tr>
+<tr>
+<td title='com.demoqa.tests.BrowserWindowsTests.verifyNewTabHeading()'><b>verifyNewTabHeading</b><br>Test class: com.demoqa.tests.BrowserWindowsTests</td>
+<td></td>
+<td>14</td>
+<td>com.demoqa.tests.BrowserWindowsTests@4722ef0c</td></tr>
+<tr>
+<td title='com.demoqa.tests.AlertsTests.verifyPromptAlert()'><b>verifyPromptAlert</b><br>Test class: com.demoqa.tests.AlertsTests</td>
+<td></td>
+<td>8</td>
+<td>com.demoqa.tests.AlertsTests@5b38c1ec</td></tr>
+<tr>
+<td title='com.demoqa.tests.DataPoolTests.verifyPropertyData()'><b>verifyPropertyData</b><br>Test class: com.demoqa.tests.DataPoolTests</td>
+<td></td>
+<td>0</td>
+<td>com.demoqa.tests.DataPoolTests@48e1f6c7</td></tr>
+<tr>
+<td title='com.demoqa.tests.AlertsTests.verifySimpleAlert()'><b>verifySimpleAlert</b><br>Test class: com.demoqa.tests.AlertsTests</td>
+<td></td>
+<td>13</td>
+<td>com.demoqa.tests.AlertsTests@5b38c1ec</td></tr>
+<tr>
+<td title='com.demoqa.tests.FramesTests.verifyTextInsideFrames()'><b>verifyTextInsideFrames</b><br>Test class: com.demoqa.tests.FramesTests</td>
+<td></td>
+<td>21</td>
+<td>com.demoqa.tests.FramesTests@480d3575</td></tr>
+<tr>
+<td title='com.demoqa.tests.AssertionsTests.verifyTitleAndURL()'><b>verifyTitleAndURL</b><br>Test class: com.demoqa.tests.AssertionsTests</td>
+<td></td>
+<td>4</td>
+<td>com.demoqa.tests.AssertionsTests@338fc1d8</td></tr>
+<tr>
+<td title='com.demoqa.tests.AssertionsTests.verifyTitleAndURL_Pass()'><b>verifyTitleAndURL_Pass</b><br>Test class: com.demoqa.tests.AssertionsTests</td>
+<td></td>
+<td>7</td>
+<td>com.demoqa.tests.AssertionsTests@338fc1d8</td></tr>
+</table><p>
+</body>
+</html>
