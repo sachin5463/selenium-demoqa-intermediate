@@ -248,28 +248,57 @@ public class BasePage {
 //        }
 //    }
 
+//    public String captureScreenshot(String testName) {
+//        try {
+//            // Take screenshot
+//            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//
+//            // ✅ Common folder for all screenshots
+//            String folderPath = System.getProperty("user.dir") + "/test-output/screenshots/";
+//            File dir = new File(folderPath);
+//            if (!dir.exists()) {
+//                dir.mkdirs();
+//                System.out.println("📁 Created screenshots directory: " + folderPath);
+//            }
+//
+//            // ✅ Screenshot file path (overwrite same test screenshot every run)
+//            String filePath = folderPath + testName + ".png";
+//
+//            // ✅ Overwrite previous image (no timestamp)
+//            File dest = new File(filePath);
+//            FileUtils.copyFile(src, dest);
+//
+//            System.out.println("📸 Screenshot captured and saved at: " + filePath);
+//            return filePath;
+//        } catch (Exception e) {
+//            System.out.println("⚠️ Screenshot capture failed: " + e.getMessage());
+//            return null;
+//        }
+//    }
+
     public String captureScreenshot(String testName) {
         try {
-            // Take screenshot
+            // ✅ Take screenshot
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-            // ✅ Common folder for all screenshots
-            String folderPath = System.getProperty("user.dir") + "/test-output/screenshots/";
-            File dir = new File(folderPath);
+            // ✅ Always store inside test-output/screenshots (no extra prefix)
+            String screenshotDir = System.getProperty("user.dir") + "/test-output/screenshots/";
+            File dir = new File(screenshotDir);
             if (!dir.exists()) {
                 dir.mkdirs();
-                System.out.println("📁 Created screenshots directory: " + folderPath);
+                System.out.println("📁 Created screenshots directory: " + dir.getAbsolutePath());
             }
 
-            // ✅ Screenshot file path (overwrite same test screenshot every run)
-            String filePath = folderPath + testName + ".png";
-
-            // ✅ Overwrite previous image (no timestamp)
+            // ✅ Final clean path (no duplication, no timestamp for overwrite)
+            String filePath = screenshotDir + testName + ".png";
             File dest = new File(filePath);
+
+            // ✅ Overwrite any existing file each run
             FileUtils.copyFile(src, dest);
 
-            System.out.println("📸 Screenshot captured and saved at: " + filePath);
+            System.out.println("📸 Screenshot saved successfully: " + filePath);
             return filePath;
+
         } catch (Exception e) {
             System.out.println("⚠️ Screenshot capture failed: " + e.getMessage());
             return null;
